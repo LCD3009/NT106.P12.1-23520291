@@ -47,9 +47,8 @@ namespace Lab2_Bai3_Bai4
         private bool CheckName(string name)
         {
             if (string.IsNullOrWhiteSpace(name) || name.Length > 30) return false;
-            string pattern = @"^[a-zA-Z\s]+$";
+            string pattern = @"^[\p{L}\s]+$";
             if (!System.Text.RegularExpressions.Regex.IsMatch(name, pattern)) return false;
-
             return true;
         }
 
